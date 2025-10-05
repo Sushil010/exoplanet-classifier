@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import joblib
+from sklearn.externals import joblib
 import xgboost as xgb
 import matplotlib.pyplot as plt
 
@@ -144,3 +144,4 @@ elif option == "Manual Entry":
 
         st.write(f"Prediction: **{decoded_pred}**")
         st.write(f"Probabilities → {class_names[0]}: {probs[0][0]:.3f}, {class_names[1]}: {probs[0][1]:.3f}")
+
